@@ -1,6 +1,7 @@
-# <center> <font color = "green"> Currency Rate </font></center>
+# Currency Rate 
 
 <p align ='justify' style = "text-indent: 25px;">Курс любой валюты постоянно находится в изменчивом состоянии. Отслеживание динамики валютного курса вручную не всегда является оптимальным решением. Поэтому для автоматического трекинга колебания курса валюты с помощью Python был разработан TelegramBOT - <i>CurrencyRate</i> </p>
+
 ### Описание проекта
 
 <p align ="justify" style = "text-indent: 25px;"><i><b>Currecy Rate</i></b> - чат-бот, выполняющий функцию «финансового консультанта». Бот ведет с пользователем осмысленный диалог, при желании юзера информирует его о текущем курсе интересующей валюты. Кроме того, перенаправляя пользователя на необходимую страницу, бот предлагает узнать последние события, произошедшие в экономической сфере общества. Формулировки достаточно нейтральны и понятны человеку с любым уровнем развития.</p>
@@ -69,7 +70,7 @@
         phrase = emoji.emojize(
             'Добрый вечер! Желаете узнать точный курс валюты на сегодня? :smiling_face_with_smiling_eyes:')
 
-![](./pic/1.jpg)
+<p align="center"><img src="./pic/1.jpg" alt="drawing" width="400" align ="justify"/></p> 
 
 <p align ="justify">Далее используем send_message, в него записываем id чата (его можно достать из message.chat.id), в который необходимо отправить сообщение и, собственно, само сообщение (phrase).
 
@@ -98,11 +99,11 @@
 
 <p align ="justify">Если пользователь желает узнать текущий курс валюты, перед ним возникает клавиатура, позволяющая сделать выбор.
 
-![](./pic/2.jpg)
+<p align="center"><img src="./pic/2.jpg" alt="drawing" width="400" align ="justify"/></p> 
 
 <p align ="justify">Если пользователь отказывается узнать курс валюты, бот предлагает ему прочесть последние новости.
 
-![](./pic/9.jpg)
+<p align="center"><img src="./pic/9.jpg" alt="drawing" width="400" align ="justify"/></p> 
 
 * <p align ="justify">Предоставление пользователю интересующей его информации (курса валюты, ссылки на веб-страницу). Прощание с пользователем.
 
@@ -121,10 +122,10 @@
        bot.send_message(message.chat.id, emoji.emojize('Узнайте последние новости и будьте в курсе всех событий!\nКак только я Вам понадоблюсь, напишите - /start'))
        bot.send_sticker(message.chat.id, 'CAACAgIAAxkBAAEDPjhhiX_Ns9nFyd7paB2WA2QH2Oo2iQACDQADwDZPE6T54fTUeI1TIgQ')
 
-![](./pic/6.jpg)
+<p align="center"><img src="./pic/6.jpg" alt="drawing" width="400" align ="justify"/></p> 
 <p align ="justify">При нажатии на появившуюся кнопку, перед пользователем появляется ссылка, перенаправляющая его на предложенную веб-страницу.
 
-![](./pic/7.jpg)
+<p align="center"><img src="./pic/7.jpg" alt="drawing" width="400" align ="justify"/></p> 
 
 <p align ="justify">2. Если пользователь отказывается прочесть последние новости, перед ним всплывает сообщение от бота, в котором он вежливо прощается и предлагает воспользоваться его функционалом в другой раз.
 
@@ -132,7 +133,7 @@
         bot.send_message(message.chat.id, "Тогда увидимя в следующий раз \nКак только я Вам понадоблюсь, напишите /start")
         bot.send_sticker(message.chat.id, 'CAACAgIAAxkBAAEDPjhhiX_Ns9nFyd7paB2WA2QH2Oo2iQACDQADwDZPE6T54fTUeI1TIgQ')
 
-![](./pic/10.jpg)
+<p align="center"><img src="./pic/10.jpg" alt="drawing" width="400" align ="justify"/></p> 
 
 <p align ="justify">3. В противном случае, если же пользователь желает узнать текущий курс валюты, бот отправляет юзеру необходимые данные, которые достаются из сформированного ранее словаря CURRENCY_RATE.
 
@@ -164,7 +165,7 @@
                                  f'Покупка валюты банком: {v[1]}''\n'
                                  f'Курс НБ РБ: {v[2]}''\n''\n')
                 bot.send_message(message.chat.id, 'Желаете узнать курс другой валюты?', reply_markup=keyboard)
-![](./pic/3.jpg)
+<p align="center"><img src="./pic/3.jpg" alt="drawing" width="400" align ="justify"/></p> 
 <p align ="justify">Также у пользователя имеется возможность узнать курс и другой валюты, при соглашении ход событий аналогичен.
 
 
@@ -172,4 +173,4 @@
     def currency_2():
     callback_worker_1
 
-![](./pic/4.jpg)
+<p align="center"><img src="./pic/4.jpg" alt="drawing" width="400" align ="justify"/></p> 
